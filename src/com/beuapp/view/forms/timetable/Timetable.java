@@ -2,19 +2,37 @@ package com.beuapp.view.forms.timetable;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
-public class Timetable extends JPanel{
-    public Timetable(){
-        this.setBackground(new Color(244, 244, 249));
-        this.setPreferredSize(new Dimension(1200, 850));
+public class Timetable extends JTable{
 
-        this.setLayout(new BorderLayout());
+    public Timetable() {
+        // Initialize the table with a default data model
+        String[] columnNames = {"ID", "Name", "Age"};
+        Object[][] data = {
+            {1, "Alice", 25},
+            {2, "Bob", 30},
+            {3, "Charlie", 35}
+        };
 
-        JLabel label = new JLabel("Timetable Not Implemented Yet", SwingConstants.CENTER);
-        label.setFont(new Font("Roboto Mono", Font.PLAIN, 36));
-        label.setHorizontalAlignment(SwingConstants.CENTER); // Horizontal centering
-        label.setVerticalAlignment(SwingConstants.CENTER); 
-        this.add(label);
-        this.setVisible(true);
+        DefaultTableModel model = new DefaultTableModel(data, columnNames);
+        this.setModel(model);
+
+        // Customize the table
+        this.setRowHeight(30); // Set row height
+        this.setSelectionMode(ListSelectionModel.SINGLE_SELECTION); // Single selection
+        this.setAutoCreateRowSorter(true); // Enable sorting
+    }
+
+    // Custom behavior: Prevent editing of the first column
+    @Override
+    public boolean isCellEditable(int row, int column) {
+        return column != 0; // Allow editing only for non-ID columns
+    }
+
+    // Add custom behavior as needed
+    public void clearTable() {
+        DefaultTableModel model = (DefaultTableModel) this.getModel();
+        model.setRowCount(0); // Clear all rows
     }
 }
