@@ -1,5 +1,6 @@
 package com.beuapp.view.main;
 
+import com.beuapp.view.forms.timetable.Timetable;
 import com.beuapp.view.menubar.MenuBar;
 import com.beuapp.view.menubar.TestForm;
 import java.awt.*;
@@ -45,7 +46,7 @@ public class DefaultFrame extends JFrame{
         // Set event for button pressed in menu bar
         menuBar.setEvent((int index, int subIndex) -> {
             if(index == 1 && subIndex == 1){
-                showForm(new TestForm("Beu"));
+                showForm(new Timetable());
             } else{
                 showForm(new TestForm("Form: " + index + " " + subIndex + " " + "Not Implemented Yet"));
             }
