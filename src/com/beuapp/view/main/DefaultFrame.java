@@ -23,7 +23,7 @@ public class DefaultFrame extends JFrame{
         
 
         // Sets up the frame icon
-        ImageIcon icon = new ImageIcon("resources\\appicons\\header.png");
+        ImageIcon icon = new ImageIcon("resources\\appicons\\appicon.jpg");
         this.setIconImage(icon.getImage());
 
         // Sets up the header

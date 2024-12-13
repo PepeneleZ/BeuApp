@@ -1,7 +1,5 @@
 package com.beuapp.view.menubar;
 
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.geom.AffineTransform;

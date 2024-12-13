@@ -1,6 +1,5 @@
 package com.beuapp.view.menubar;
 
-
 import java.awt.*;
 import javax.swing.*;
 

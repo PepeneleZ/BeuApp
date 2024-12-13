@@ -1,10 +1,7 @@
 package com.beuapp;
 
 import javax.swing.SwingUtilities;
-
 import com.beuapp.view.main.DefaultFrame;
-
-
 
 class Main {
     public static void main(String[] args) {
