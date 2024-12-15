@@ -1,7 +1,7 @@
 package com.beuapp;
 
-import javax.swing.SwingUtilities;
 import com.beuapp.view.main.DefaultFrame;
+import javax.swing.SwingUtilities;
 
 class Main {
     public static void main(String[] args) {

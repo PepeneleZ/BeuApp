@@ -29,7 +29,7 @@ public class DefaultFrame extends JFrame{
 
         // Sets up the header
         header = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        header.setBackground(new Color(47, 69, 80));
+        header.setBackground(new Color(0x001523));
         header.setPreferredSize(new Dimension(100, 50));
 
         // Sets up the header text

@@ -17,7 +17,7 @@ public class MenuBar extends JPanel{
 
     private final String[][] buttons = {
         {"Dashboard"},
-        {"Timetable", "View","Add Classes","Statistics"},
+        {"Timetable", "View","Edit","Statistics"},
         {"Email", "Inbox", "Compose"}
         
     };
@@ -25,8 +25,9 @@ public class MenuBar extends JPanel{
     public MenuBar() {
         // Set up the menu bar panel
         this.setPreferredSize(new Dimension(240, 850));
-        this.setVisible(true);
         this.setLayout(new FlowLayout());
+        this.setBackground(new Color(0x002137));
+        this.setVisible(true);
 
         // Initialize the buttons
         initButtons();
@@ -98,7 +99,7 @@ public class MenuBar extends JPanel{
         subMenu.setOpaque(true);
         subMenu.setPreferredSize(new Dimension(240, 0));
         subMenu.setName("subemenu- " + index);
-        subMenu.setBackground(new Color(88, 111, 124));
+        subMenu.setBackground(new Color(0x002E4E));
 
         // Add all buttons in the sub array to the sub menu
         for (int i = 1; i < length; i++) {
@@ -169,27 +170,5 @@ public class MenuBar extends JPanel{
         }
     }
 
-    @Override
-    // Paint the menu bar with a gradient
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
 
-        Graphics2D g2d = (Graphics2D) g;
-
-        // Define the gradient colors
-        Color color1 = new Color(47, 69, 80);
-        Color color2 = new Color(88, 111, 124); 
-
-        // Create a linear gradient that transitions from top to bottom
-        GradientPaint gradient = new GradientPaint(
-            0, 0, color1,     
-            0, getHeight(), color2
-        );
-
-        // Set the gradient as the current paint
-        g2d.setPaint(gradient);
-
-        // Fill the panel with the gradient
-        g2d.fillRect(0, 0, getWidth(), getHeight());
-    }
 }

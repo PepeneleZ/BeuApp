@@ -5,13 +5,14 @@ import javax.swing.*;
 
 public class TestForm extends JPanel{
     public TestForm(String text){
-        this.setBackground(new Color(244, 244, 249));
+        this.setBackground(new Color(0X00406C));
         this.setPreferredSize(new Dimension(1200, 850));
 
         this.setLayout(new BorderLayout());
 
         JLabel label = new JLabel(text, SwingConstants.CENTER);
         label.setFont(new Font("Roboto Mono", Font.PLAIN, 36));
+        label.setForeground(Color.WHITE);
         label.setHorizontalAlignment(SwingConstants.CENTER); // Horizontal centering
         label.setVerticalAlignment(SwingConstants.CENTER); 
         this.add(label);
